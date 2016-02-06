@@ -20,15 +20,15 @@ namespace SignShop\Manager;
 
 use SignShop\SignShop;
 use pocketmine\Server;
-use pocketmine\nbt\tag\Int;
-use pocketmine\nbt\tag\String;
+use pocketmine\nbt\tag\IntTag;
+use pocketmine\nbt\tag\StringTag;
+use pocketmine\nbt\tag\CompoundTag;
 use pocketmine\level\Level;
 use pocketmine\level\Position;
 use pocketmine\item\Item;
 use pocketmine\block\Block;
 use pocketmine\tile\Sign;
 use pocketmine\tile\Tile;
-use pocketmine\nbt\tag\Compound;
 use pocketmine\utils\TextFormat;
 
 class SignManager{
@@ -132,15 +132,15 @@ class SignManager{
             return;
         }
         
-        $sign = new Sign($pos->level->getChunk($pos->x >> 4, $pos->z >> 4, true), new Compound(false, array(
-            new Int("x", $pos->x),
-            new Int("y", $pos->y),
-            new Int("z", $pos->z),
-            new String("id", Tile::SIGN),
-            new String("Text1", $line[0]),
-            new String("Text2", $line[1]),
-            new String("Text3", $line[2]),
-            new String("Text4", $line[3])
+        $sign = new Sign($pos->level->getChunk($pos->x >> 4, $pos->z >> 4, true), new CompoundTag(false, array(
+            new IntTag("x", $pos->x),
+            new IntTag("y", $pos->y),
+            new IntTag("z", $pos->z),
+            new StringTag("id", Tile::SIGN),
+            new StringTag("Text1", $line[0]),
+            new StringTag("Text2", $line[1]),
+            new StringTag("Text3", $line[2]),
+            new StringTag("Text4", $line[3])
             )));               
     }   
     
@@ -150,9 +150,9 @@ class SignManager{
     } 
         
     private function getPos(Position $pos){        
-        $pos->x = (Int) $pos->getX();
-        $pos->y = (Int) $pos->getY();
-        $pos->z = (Int) $pos->getZ();
+        $pos->x = (IntTag) $pos->getX();
+        $pos->y = (IntTag) $pos->getY();
+        $pos->z = (IntTag) $pos->getZ();
      
         return $pos;
     }
