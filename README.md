@@ -1,6 +1,6 @@
-You can download the phar file of the new version of SignShop by clicking on this <a href="http://devs4pm.eu/forums/resources/signshop.36/">page</a>.<br><br>
+You can download the phar file of the new version of SignShop by clicking on this <a href="https://github.com/flaxues/SignShop/blob/master/SignShop.phar">page</a>.<br><br>
 
-<b>You have problems?</b> Report <a href="https://github.com/xionbig/SignShop/issues">HERE</a><br>
+<b>You have problems?</b> Report <a href="https://github.com/flaxues/SignShop/issues">HERE</a><br>
 <b>For info, commands, tutorials please visit <a href="http://xionbig.netsons.org/plugins/SignShop/">this site.</a></b>
 
 
